@@ -13,7 +13,7 @@ app.controller('MainCtrl', ['$scope', '$http', '$location', function($scope, $ht
 	job = job.split('&')[0];
   }
   //console.log('job:' + job);
-  $http.get('http://localhost:8181/cxf/barry/auto-deploy/logs/' + job).then(
+  $http.get('http://karaf1.barryku.us:8181/cxf/barry/auto-deploy/logs/' + job).then(
 	function(data) {
 		$scope.data = data.data;
 	
