@@ -21,8 +21,8 @@ public class DynamoLogger {
 	private DynamoDB db;
 
 	public DynamoLogger(Region region) {
-		AmazonDynamoDB dynamo = new AmazonDynamoDBClient(AwsCredentialFactory.getCredential());
-		//AmazonDynamoDB dynamo = new AmazonDynamoDBClient();
+		//AmazonDynamoDB dynamo = new AmazonDynamoDBClient(AwsCredentialFactory.getCredential());
+		AmazonDynamoDB dynamo = new AmazonDynamoDBClient();
 		dynamo.setRegion(region);
 		db = new DynamoDB(dynamo);
 	}
